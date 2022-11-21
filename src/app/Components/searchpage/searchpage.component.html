@@ -1,0 +1,164 @@
+<div class="container" style="padding-left: 3rem">
+  <div class="row">
+    <div class="col-3 searchpad">
+      <div class="d-inline-flex col-12 column-1st">
+        <button id="space" onclick="buttonId(this.id)" class="btn btn-dark">
+          <span class="material-icons" style="font-size: 1.4rem"
+            >space_bar</span
+          >
+        </button>
+        <button id="backspace" onclick="buttonId(this.id)" class="btn btn-dark">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="a" onclick="buttonId(this.id)" class="btn btn-dark">
+          a
+        </button>
+        <button id="b" onclick="buttonId(this.id)" class="btn btn-dark">
+          b
+        </button>
+        <button id="c" onclick="buttonId(this.id)" class="btn btn-dark">
+          c
+        </button>
+        <button id="d" onclick="buttonId(this.id)" class="btn btn-dark">
+          d
+        </button>
+        <button id="e" onclick="buttonId(this.id)" class="btn btn-dark">
+          e
+        </button>
+        <button id="f" onclick="buttonId(this.id)" class="btn btn-dark">
+          f
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="g" onclick="buttonId(this.id)" class="btn btn-dark">
+          g
+        </button>
+        <button id="h" onclick="buttonId(this.id)" class="btn btn-dark">
+          h
+        </button>
+        <button id="i" onclick="buttonId(this.id)" class="btn btn-dark">
+          i
+        </button>
+        <button id="j" onclick="buttonId(this.id)" class="btn btn-dark">
+          j
+        </button>
+        <button id="k" onclick="buttonId(this.id)" class="btn btn-dark">
+          k
+        </button>
+        <button id="l" onclick="buttonId(this.id)" class="btn btn-dark">
+          l
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="m" onclick="buttonId(this.id)" class="btn btn-dark">
+          m
+        </button>
+        <button id="n" onclick="buttonId(this.id)" class="btn btn-dark">
+          n
+        </button>
+        <button id="o" onclick="buttonId(this.id)" class="btn btn-dark">
+          o
+        </button>
+        <button id="p" onclick="buttonId(this.id)" class="btn btn-dark">
+          p
+        </button>
+        <button id="q" onclick="buttonId(this.id)" class="btn btn-dark">
+          q
+        </button>
+        <button id="r" onclick="buttonId(this.id)" class="btn btn-dark">
+          r
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="s" onclick="buttonId(this.id)" class="btn btn-dark">
+          s
+        </button>
+        <button id="t" onclick="buttonId(this.id)" class="btn btn-dark">
+          t
+        </button>
+        <button id="u" onclick="buttonId(this.id)" class="btn btn-dark">
+          u
+        </button>
+        <button id="v" onclick="buttonId(this.id)" class="btn btn-dark">
+          v
+        </button>
+        <button id="w" onclick="buttonId(this.id)" class="btn btn-dark">
+          w
+        </button>
+        <button id="x" onclick="buttonId(this.id)" class="btn btn-dark">
+          x
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="y" onclick="buttonId(this.id)" class="btn btn-dark">
+          y
+        </button>
+        <button id="z" onclick="buttonId(this.id)" class="btn btn-dark">
+          z
+        </button>
+        <button id="1" onclick="buttonId(this.id)" class="btn btn-dark">
+          1
+        </button>
+        <button id="2" onclick="buttonId(this.id)" class="btn btn-dark">
+          2
+        </button>
+        <button id="3" onclick="buttonId(this.id)" class="btn btn-dark">
+          3
+        </button>
+        <button id="4" onclick="buttonId(this.id)" class="btn btn-dark">
+          4
+        </button>
+      </div>
+      <div class="d-inline-flex col-12 common-btn">
+        <button id="5" onclick="buttonId(this.id)" class="btn btn-dark">
+          5
+        </button>
+        <button id="6" onclick="buttonId(this.id)" class="btn btn-dark">
+          6
+        </button>
+        <button id="7" onclick="buttonId(this.id)" class="btn btn-dark">
+          7
+        </button>
+        <button id="8" onclick="buttonId(this.id)" class="btn btn-dark">
+          8
+        </button>
+        <button id="9" onclick="buttonId(this.id)" class="btn btn-dark">
+          9
+        </button>
+        <button id="0" onclick="buttonId(this.id)" class="btn btn-dark">
+          0
+        </button>
+      </div>
+    </div>
+    <div class="col-9 movie-suggestions">
+ 
+      <div class="suggestion-box">
+        <form action="" id="form">
+        <input
+          type="text"
+          name="search"
+          [(ngModel)]="searchterm" (input)="search()"
+          onclick="Keydown()"
+          class="mt-4 form-control"
+          id="searchBar1"
+          placeholder="Search Here ..."
+        /></form>
+        <div class="d-inline-flex col-12 pt-3 flex-wrap justify-content-around">
+          <div
+            class="card"
+            style="width: 16.4rem; margin-bottom: 1rem"
+            *ngFor="let popmovie of PopularMovies?.results"
+          >
+            <img
+              class=""
+              src="{{ popmovie.backdrop_path }}"
+              alt="Card image cap"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

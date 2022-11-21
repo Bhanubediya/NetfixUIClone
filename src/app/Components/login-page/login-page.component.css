@@ -1,0 +1,22 @@
+/* https://th.bing.com/th/id/R.d2edb29f3f970c36aadecbb01ed0bb79?rik=euy3GgtoVbZXjQ&riu=http%3a%2f%2fs3-us-west-2.amazonaws.com%2ftechvibes%2fwp-content%2fuploads%2f2017%2f04%2f24135159%2fNetflix-Background.jpg&ehk=Te5qPs5gcrmm6JGD3hx5pWZ%2f7tWNKhG3laqWQsQBqd4%3d&risl=&pid=ImgRaw&r=0 */
+.background-wallpaper{
+  background-image: url('http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg');
+  height: 100vh;
+  background-size: cover;
+}
+.container{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.74);
+ width: 26%;
+ height: 80%;
+ top: 4rem;
+ align-items: center;
+ left: 30rem;
+ padding-top: 4rem;
+ 
+}
+.form-group>input{
+background-color: rgba(55, 54, 54, 0.93);
+margin-bottom: 1rem;
+color: aliceblue;
+}

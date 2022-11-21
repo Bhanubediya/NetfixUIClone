@@ -1,0 +1,49 @@
+.side-bar-nav{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+}
+
+.sidenav {
+  height: 100%;
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* rgba(23, 23, 23, 0.197) */
+  background-color: rgba(23, 23, 23, 0.568);
+  overflow: hidden;
+  border-right: #fffdfd 1px solid;
+  transition: 0.5s;
+  padding-top: 6rem;
+}
+
+.sidenav a {
+
+padding: 1rem 1px 8px 25px;
+text-decoration: none;
+font-size: 25px;
+color: #fffdfd;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: rgb(212, 143, 118);
+}
+
+.sidenav a:focus{
+  border-left: red 4px solid;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+#home{
+  border-left: red 4px solid;
+}

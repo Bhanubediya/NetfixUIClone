@@ -1,0 +1,188 @@
+<div class="banner">
+  <div
+    id="MainImg"
+    class="bg-image overflow-hidden"
+    style="
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 26%,
+          rgba(0, 0, 0, 0)
+        ),
+        url('https://wallpapercave.com/wp/wp4969727.jpg');
+      height: 100vh;
+      background-size: cover;
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+      z-index: -1;
+    "
+  ></div>
+
+  <div class="container">
+    <div class="logo d-inline-flex">
+      <img src="/assets/netflixlogo.png" alt="" />
+      <h2 class="text-white" id="moviesOrSeries">series</h2>
+    </div>
+    <h5 id="title1" class="title">STRANGER THINGS 2</h5>
+    <ul
+      class="d-inline-flex justify-content-between ul-container"
+      style="list-style: none"
+    >
+      <li id="perc"><strong>95% Match</strong></li>
+      <li class="heading-info"><strong>2017</strong></li>
+      <li class="heading-info" id="genre"><strong>2 Seasons</strong></li>
+      <li class="heading-info border"><strong>4K ULTRA-HD</strong></li>
+      <li class="heading-info border"><strong>5.1</strong></li>
+    </ul>
+    <div class="container paragraph col-7">
+      <p id="para">
+        When a young boy disappears, his mother, a police chief and his friends
+        must confront terrifying supernatural forces in order to get him back.
+      </p>
+      <div class="d-inline-flex col-6 banner-btn">
+        <button class="btn btn-danger col-4">
+          <i class="fa-solid fa-play" style="margin-right: 0.5rem"></i> PLAY
+        </button>
+        <button class="btn btn-outline-light w-50">
+          <i class="fa-solid fa-plus"></i> MY LIST
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Movie-container">
+  <div class="" style="padding-left: 7rem; padding-bottom: 1.5rem">
+    <h3 class="text-light" style="padding-left: 1rem; padding-bottom: 0.5rem">
+    Top 9 in India Today
+    </h3>
+    <swiper
+    [slidesPerView]="4"
+    [spaceBetween]="90"
+    [navigation]="false"
+    [pagination]="false"
+    [scrollbar]="{ draggable: true }"
+  >
+  <ng-template swiperSlide  *ngFor="let popmovie of PopularMovies?.results | slice:6:15; let i=index" >
+    <div class="card-container d-inline-flex">
+     <h1 class="trend-num">{{i+1}}</h1>
+    <div
+      class="card"
+      style="width: 10rem; height: 15rem"
+      onclick="ImageUpdate(this)"
+    >
+        <img
+          class=""
+          src="{{ popmovie.backdrop_path }}"
+          alt="Card image cap"
+          style="width: 10rem; height:  15rem"
+        />
+      
+      <p hidden>{{ popmovie.title }}</p>
+      <p hidden>{{ popmovie.overview }}</p>
+      <p hidden>Movie</p>
+    </div>
+  </div>
+  </ng-template>
+  </swiper>
+  </div>
+ 
+  <div class="Movie-container">
+    <div class="" style="padding-left: 7rem; padding-bottom: 1.5rem">
+      <h3 class="text-light" style="padding-left: 1rem; padding-bottom: 0.5rem">
+        Latest Movies
+      </h3>
+<swiper
+  [slidesPerView]="4"
+  [spaceBetween]="20"
+  [navigation]="false"
+  [pagination]="false"
+  [scrollbar]="{ draggable: true }"
+>
+  <ng-template swiperSlide *ngFor="let popmovie of PopularMovies?.results " >
+    
+    <div
+      class="card"
+      style="width: 90rem; height: 28rem"
+      onclick="ImageUpdate(this)"
+    >
+     
+     
+        <img
+          class=""
+          src="{{ popmovie.backdrop_path }}"
+          alt="Card image cap"
+          style="width: 18rem; height: 28rem"
+        />
+      
+      <p hidden>{{ popmovie.title }}</p>
+      <p hidden>{{ popmovie.overview }}</p>
+      <p hidden>Movie</p>
+    </div>
+  </ng-template>
+</swiper> 
+</div>
+
+  <div class="" style="padding-left: 7rem; padding-bottom: 1.5rem">
+    <h3 class="text-light" style="padding-left: 1rem; padding-bottom: 0.5rem">
+      Series
+    </h3>
+    <swiper
+      [slidesPerView]="3"
+      [spaceBetween]="10"
+      [navigation]="false"
+      [pagination]="false"
+      [scrollbar]="{ draggable: true }"
+    >
+      <ng-template swiperSlide *ngFor="let Tv of TvMovie?.results">
+        <div
+          class="card"
+          style="width: 100rem; height: 15rem"
+          onclick="ImageUpdate(this)"
+        >
+          <img class="" src="{{ Tv.backdrop_path }}" alt="Card image cap" />
+          <p hidden>{{ Tv.title }}</p>
+          <p hidden>{{ Tv.overview }}</p>
+          <p hidden>Series</p>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="" style="padding-left: 7rem; padding-bottom: 2rem">
+    <h3 class="text-light" style="padding-left: 1rem; padding-bottom: 0.5rem">
+      Popular Movies
+    </h3>
+    <swiper
+      [slidesPerView]="3"
+      [spaceBetween]="10"
+      [navigation]="false"
+      [pagination]="false"
+      [scrollbar]="{ draggable: true }"
+    >
+      <ng-template swiperSlide *ngFor="let popmovie of PopularMovies?.results | slice:10:20;">
+        <div
+          class="card"
+          style="width: 100rem; height: 15rem"
+          onclick="ImageUpdate(this)"
+        >
+          <img
+            class=""
+            src="{{ popmovie.backdrop_path }}"
+            alt="Card image cap"
+          />
+          <p hidden>{{ popmovie.title }}</p>
+          <p hidden>{{ popmovie.overview }}</p>
+          <p hidden>Series</p>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>
+
+<!-- <div  *ngFor="let popmovie of LatestMovies?.results[0]">
+<div>
+  {{LatestMovies.}}
+</div>
+</div> -->
