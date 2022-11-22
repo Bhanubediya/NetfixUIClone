@@ -50,11 +50,19 @@ export class SearchpageComponent implements OnInit {
     return Movies;
   }
   search() {
-
-    this.PopularMovies.results= this.PopularMovies.results?.filter(res=>{
-      return res.title.trim().toLocaleLowerCase().match(this.searchterm.toLocaleLowerCase())})
+    console.log(this.searchterm)
+if(this.searchterm!=""){
+ setInterval(()=>{
+  this.PopularMovies.results= this.PopularMovies.results?.filter(res=>{
+    return res.title.trim().toLocaleLowerCase().match(this.searchterm.toLocaleLowerCase())
+  },100);
+ })
+}
+else if(this.searchterm==""){
+this.ngOnInit();
+}
     // this.searchterm=(event.target as HTMLInputElement).value;
-    // console.log(this.searchterm)
+     
     // this.cartService.search.next(this.searchterm);
   }
 }
