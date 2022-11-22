@@ -25,7 +25,7 @@ alert(){
       this.Route.navigateByUrl('/home');
     }
     else if (email === '' || password === '') {
-      window.alert('kindly enter somrthing in input field.')
+      window.alert('kindly enter something in input field.')
     }
   }
 }
