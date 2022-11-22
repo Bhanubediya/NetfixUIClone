@@ -11,5 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  alert(){
+
+window.alert("currently this page is under develpment! ")
+
+  }
 
 }

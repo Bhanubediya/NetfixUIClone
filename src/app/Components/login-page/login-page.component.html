@@ -2,16 +2,16 @@
 
 </div>
 <div class="shadow-lg container">
-  <form action="">
+  <form action="" [formGroup]="loginDetails" (ngSubmit)="onSubmit()" >
     <h4 class="text-white mb-3">Sign In</h4>
   <div class="form-group">
-  <input type="text" placeholder="Email or phone number" class="form-control" name="email">
+  <input type="text"  placeholder="Enter any name or number" formControlName="email" class="form-control" name="email">
   </div>
   <div class="form-group">
-    <input type="password" placeholder="Password" class="form-control" name="Password">
+    <input type="password" placeholder="Enter any Password" formControlName="password" class="form-control" name="Password">
     </div>
     <div class="button-signin text-center">
-  <button class="btn btn-danger w-50" routerLink="/home">Sign In</button>
+  <button class="btn btn-danger w-50"[disabled]="!loginDetails.valid" >Sign In</button>
   </div>
   <div class="d-inline-flex justify-content-between w-100">
     <div class="d-inline-flex">

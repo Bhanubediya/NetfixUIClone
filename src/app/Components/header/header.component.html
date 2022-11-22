@@ -15,25 +15,29 @@
       <span style="padding-left: 3.3rem"> Home</span></a
     >
     <a class="nav-link" routerLink="/home" id="tv" onclick="openNav('tv')"
+    (click)="alert()"
       ><i class="fa-solid fa-tv"></i>
       <span style="padding-left: 3.3rem"> Series</span></a
     >
     <a
       class="nav-link"
-      routerLink="/trackDetails"
+      routerLink="/home"
       id="movies"
       onclick="openNav('movies')"
+      (click)="alert()"
       ><i class="fa-solid fa-clapperboard"></i>
       <span style="padding-left: 3.3rem"> Movies</span></a
     >
     <a class="nav-link" routerLink="/home" id="plus" onclick="openNav('plus')"
+    (click)="alert()"
       ><i class="fa-solid fa-plus"></i>
       <span style="padding-left: 3.3rem"> List</span></a
     >
     <a
       class="nav-link"
-      routerLink="/trackDetails"
+      routerLink="/home"
       id="calendar"
+      (click)="alert()"
       onclick="openNav('calendar')"
       ><i class="fa-solid fa-calendar-days"></i>
       <span style="padding-left: 3.3rem">New Arrival</span></a
